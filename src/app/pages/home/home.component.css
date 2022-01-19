@@ -1,0 +1,14 @@
+.rounded{
+    border-top-right-radius: 0.7rem !important;
+    border-top-left-radius: 0.7rem !important;
+}
+/* .btn:hover{
+    background-color: lightgray !important;
+} */
+/* .btn:active{
+    background-color: #8064A2 !important;
+} */
+
+.color{
+    background-color: red;
+}

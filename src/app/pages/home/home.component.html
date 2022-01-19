@@ -1,0 +1,17 @@
+
+<div class="container-fluid" style="background-color:lightgray">
+    <h2> Spacestagram</h2>
+    <p>Brought to you by Nasa's image API</p>
+    <div class="card-group" style="display: grid;grid-template-columns: repeat(3,1fr);">
+        <div class="card shadow" *ngFor="let item of response.photos"
+            style="margin-bottom: 20px;width: 22rem;border-radius: 3%;">
+            <img [src]="item.img_src" height="300" class="card-img-top rounded">
+            <div class="card-body" style="height:140px;background-color:white;border-radius:100px">
+                <h5 class="card-title" style="margin-top: 10px;">{{item.camera.full_name}}</h5>
+                <p class="card-text">{{item.earth_date}}</p>
+                <a class="btn"  (click)="isClicked = !isClicked"
+                    [ngStyle]="(isClicked ==true) ? {'background-color':'#d9534f', color:'white'} : { 'background-color':'white','border-color':'lightgray'}">Like</a>
+            </div>
+        </div>
+    </div>
+</div>
